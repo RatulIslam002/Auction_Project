@@ -115,13 +115,15 @@ public class Auction
             }
         }
     }
-    //arraylist of lots q.6
+    //arraylist of lots q.4(6)
     public ArrayList<Lot> getUnsold(){
         ArrayList<Lot> unsold =new ArrayList<>();
-           for (Lot aLot : listOfLots){
+        for (Lot aLot : listOfLots){
             Bid highest = aLot.getHighestBid();
+            if(highest==null){
+            unsold.add(aLot);
+            }
         }
-        if()s
-    
+        return unsold; 
+    }
 }
-
